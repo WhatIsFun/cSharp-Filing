@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\bin\Debug\net6.0\cSharp-Filing.exe
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\bin\Debug\net6.0\cSharp-Filing.deps.json
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\bin\Debug\net6.0\cSharp-Filing.runtimeconfig.json
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\bin\Debug\net6.0\cSharp-Filing.dll
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\bin\Debug\net6.0\cSharp-Filing.pdb
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\obj\Debug\net6.0\cSharp-Filing.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\obj\Debug\net6.0\cSharp-Filing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\obj\Debug\net6.0\cSharp-Filing.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\obj\Debug\net6.0\cSharp-Filing.AssemblyInfo.cs
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\obj\Debug\net6.0\cSharp-Filing.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\obj\Debug\net6.0\cSharp-Filing.dll
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\obj\Debug\net6.0\refint\cSharp-Filing.dll
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\obj\Debug\net6.0\cSharp-Filing.pdb
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\obj\Debug\net6.0\cSharp-Filing.genruntimeconfig.cache
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-Filing\obj\Debug\net6.0\ref\cSharp-Filing.dll
