@@ -16,8 +16,10 @@ namespace cSharp_Filing
             // Task 1 
             string fileName = "Task 1.doxc";
             string content = "Task 1 content";
-            Task1(fileName, content);
-            
+            //Task1(fileName, content);
+
+            // Task 2
+            Task2(exampleFileWithUsing, fileName);
         }
         private static void WriteFile(string exampleFile)
         {
@@ -67,6 +69,30 @@ namespace cSharp_Filing
             {
                 Console.WriteLine("File is already exist");
             }
+        }
+
+        //Task 2: Copy contents from file to another.
+        private static void Task2(string exampleFileWithUsing, string fileName)
+        {
+            // examFileWithUsing is the source file that will take the content and destinated to fileName.
+            try
+            {
+                if (!File.Exists(exampleFileWithUsing))
+                {
+                    throw new FileNotFoundException("The source file not found please use another file");
+                }
+                if (!File.Exists(fileName))
+                {
+                    throw new IOException("The destination file is already exists");
+                }
+                // To copy the content from source file to destination file.
+                File.Copy(exampleFileWithUsing, fileName);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"{ex.Message}");
+            }finally { Console.WriteLine("Exit"); }
+            
         }
     }
 }
