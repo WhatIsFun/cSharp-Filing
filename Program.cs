@@ -19,7 +19,10 @@ namespace cSharp_Filing
             //Task1(fileName, content);
 
             // Task 2
-            Task2(exampleFileWithUsing, fileName);
+            //Task2(exampleFileWithUsing, fileName);
+
+            // Task 3
+            fileStatistics(fileName);
         }
         private static void WriteFile(string exampleFile)
         {
@@ -93,6 +96,20 @@ namespace cSharp_Filing
                 Console.WriteLine($"{ex.Message}");
             }finally { Console.WriteLine("Exit"); }
             
+        }
+        // Task 3: File Statistics
+        private static void fileStatistics(string fileName)
+        {
+            try
+            {
+                string content = File.ReadAllText(fileName); // To read from this file
+                int lineCount = content.Split('\n').Length; // To count lines in the file
+                int wordCount = content.Split(' ','\n').Length; // To count words in the file
+                int charCount = content.Length; // To count characters in the file
+                Console.WriteLine($"Line Count: {lineCount}"); // To print the statistics 
+                Console.WriteLine($"Word Count: {wordCount}");
+                Console.WriteLine($"Charactars Count: {charCount}");
+            }catch(Exception ex) { Console.WriteLine(ex.Message); }
         }
     }
 }
