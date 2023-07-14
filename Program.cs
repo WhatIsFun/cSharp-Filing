@@ -26,7 +26,8 @@ namespace cSharp_Filing
             // Task 3
             //fileStatistics(fileName);
 
-            SearchReplace();
+            //SearchReplace();
+            FileSearch();
 
         }
         private static void WriteFile(string exampleFile)
@@ -155,6 +156,44 @@ namespace cSharp_Filing
                 Console.WriteLine("The file '{0}' does not exist.", filePath);
             }
         }
-        
+        // Task 5: File Search
+        // Write a function in C# that takes directory path and a file extension as input.
+        // The program should search for all files with the given extension within the specified directory and its subdirectories.
+        // Display the list of matching file names to the console.
+         
+        private static void FileSearch()
+        {
+            Console.WriteLine("Enter the directory path:");
+            string directoryPath = Console.ReadLine();
+            Console.WriteLine("Enter the file extension:");
+            string fileExtension = Console.ReadLine();
+
+            if (Directory.Exists(directoryPath))
+            {
+                // Get all the files with the given extension in the given path
+                string[] files = Directory.GetFiles(directoryPath, "*." + fileExtension, SearchOption.AllDirectories);
+
+                // To check if there are any matching files
+                if (files.Length > 0)
+                {
+                    // Display the list of matching file names
+                    Console.WriteLine("The following files have the extension {0}:", fileExtension);
+                    foreach (string file in files)
+                    {
+                        Console.WriteLine(file);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No files with the extension {0} are found in the directory {1}.", fileExtension, directoryPath);
+                }
+            }
+            else
+            {
+                Console.WriteLine("The directory {0} does not exist.", directoryPath);
+            }
+        }
+
+
     }
 }
