@@ -1,4 +1,6 @@
-﻿using System.Net.NetworkInformation;
+﻿using System.Diagnostics.Metrics;
+using System.IO;
+using System.Net.NetworkInformation;
 using System.Security.Cryptography.X509Certificates;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -8,7 +10,7 @@ namespace cSharp_Filing
     {
         static void Main(string[] args)
         {
-            string exampleFileWithUsing = "Example File with Using.txt";
+            //string exampleFileWithUsing = "Example File with Using.txt";
             //WriteFile(exampleFileWithUsing);
             //Console.WriteLine("Reading from the file");
 
@@ -22,7 +24,10 @@ namespace cSharp_Filing
             //Task2(exampleFileWithUsing, fileName);
 
             // Task 3
-            fileStatistics(fileName);
+            //fileStatistics(fileName);
+
+            SearchReplace();
+
         }
         private static void WriteFile(string exampleFile)
         {
@@ -111,5 +116,45 @@ namespace cSharp_Filing
                 Console.WriteLine($"Charactars Count: {charCount}");
             }catch(Exception ex) { Console.WriteLine(ex.Message); }
         }
+        // Task 4: Search and Replace.
+        // Implement a program in that reads a text file and searches for a specific word or phrase.
+        // Prompt the user to enter the file path and the word or phrase to search for.
+        // Replace all occurrences of the search term with a user-specified replacement.
+        // Save the modified content to a new file.
+        private static void SearchReplace()
+        {
+            Console.WriteLine("Enter the file path:");
+            string filePath = Console.ReadLine();
+            Console.WriteLine("Enter the word to search for:");
+            string searchWord = Console.ReadLine();
+
+            if (File.Exists(filePath)) // To check if the file is exists
+            {
+                
+                string content = File.ReadAllText(filePath); //To read the file content
+
+                if (content.Contains(searchWord))   // Check if the search word is found in the content
+                {
+                    Console.WriteLine("Enter the replacement:"); // To enter the replacement word or phase
+                    string replacement = Console.ReadLine();
+
+                    content = content.Replace(searchWord, replacement);
+
+                    string newFilePath = filePath + ".modified";
+                    File.WriteAllText(newFilePath, content);  // Save the file
+
+                    Console.WriteLine("The file has been modified and saved as {0}", newFilePath);
+                }
+                else
+                {
+                    Console.WriteLine("The word or phrase '{0}' is not found in the file.", searchWord);
+                }
+            }
+            else
+            {
+                Console.WriteLine("The file '{0}' does not exist.", filePath);
+            }
+        }
+        
     }
 }
